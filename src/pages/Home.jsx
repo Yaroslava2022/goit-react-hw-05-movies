@@ -1,43 +1,19 @@
-// import { List } from "./List"
+import ListOnSearch from "./List/List";
+import api from "api/api";
+import { useEffect, useState } from "react";
 
-export default function Home(){
-       return(
-    <main>
-        <h1> Tranding today</h1>
-        <ul>
-    
-        </ul>
-        </main>
-    )
- 
-}
-    
+export default function Home() {
+    const [films, setFilms] = useState([]);
+  
+    useEffect(() => {
+      api.fetchTrendMovies().then(data => {
+        const { results } = data;
+        // console.log(results);
+        setFilms(results);
+      });
+    }, []);
+   
+  
+    return <>{films && <ListOnSearch films={films} />}</>;
+  }
 
-
-      
-    //  fetchMovies()
-    //   .then(movies => {
-    //     console.log(movies);
-    //             <ul >
-    //           {movies.map(({ id, title }) => {
-    //             return (
-    //               <li  key={id}>
-    //                 Title ={title}
-    //             </li>
-    //             );
-    //           })}
-    //         </ul>
-          
-    //     }
-        // this.setState(prevState => ({
-        //   images: [...prevState.images, ...mapper(data.hits)],
-        //   page: prevState.page + 1,
-        // }));
-        // window.scrollTo({
-        //   top: document.documentElement.scrollHeight,
-        //   behavior: 'smooth',
-        // });
-        
-    //   )
-    //   .catch((error) => console.log(error))
-      // .finally(setLoading(false));

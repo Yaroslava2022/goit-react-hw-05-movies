@@ -1,5 +1,5 @@
 
-function fetchMovies(newQuery, queryPage) {
+function fetchTrendMovies(newQuery) {
     const key = 'a76f580e91cd6b2ed7bbe4acd57429cd';
     return fetch(
         `https://api.themoviedb.org/3/trending/all/day?api_key=${key}&language=en-US`
@@ -12,7 +12,7 @@ function fetchMovies(newQuery, queryPage) {
   }
   
   const api = {
-    fetchMovies,
+    fetchTrendMovies,
   };
   
   export default api;
