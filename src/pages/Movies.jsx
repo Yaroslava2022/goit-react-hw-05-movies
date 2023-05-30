@@ -3,7 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import Notiflix from 'notiflix';
 // import css from './Movies.module.css';
 import PropTypes from 'prop-types';
-import ListOnSearch from './List/List';
+import ListOnSearch from '../components/List/List';
 import api from 'api/api';
 import Loading from 'components/Loader/Loading';
 import SearchForm from 'components/SearchForm/SearchForm';

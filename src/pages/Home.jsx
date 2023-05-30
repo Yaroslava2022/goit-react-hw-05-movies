@@ -1,4 +1,4 @@
-import ListOnSearch from "./List/List";
+import ListOnSearch from "../components/List/List";
 import api from "api/api";
 import { useEffect, useState } from "react";
 
