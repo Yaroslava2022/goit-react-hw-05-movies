@@ -5,6 +5,7 @@ import css from './Reviews.module.css';
 
 export default function Reviews() {
   const [reviews, setReviews] = useState([]);
+   // eslint-disable-next-line 
   const [loading, setLoading] = useState(false);
   const { movieId } = useParams();
 

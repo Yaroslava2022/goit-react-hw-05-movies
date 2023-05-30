@@ -1,10 +1,11 @@
 import api from 'api/api';
-import { useState, useEffect, useLocation } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import css from './Cast.module.css';
 
 export default function Cast() {
   const [actors, setActors] = useState('');
+   // eslint-disable-next-line 
   const [loading, setLoading] = useState(false);
   const { movieId } = useParams();
 
