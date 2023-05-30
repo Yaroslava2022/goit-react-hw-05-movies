@@ -34,6 +34,7 @@ export default function MovieDetails() {
           return;
         }
         fetchFilmDetails();
+         // eslint-disable-next-line 
       }, [movieId]);
     
       const fetchFilmDetails = () => {
