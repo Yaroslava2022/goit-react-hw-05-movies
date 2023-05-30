@@ -10,10 +10,12 @@ import SearchForm from 'components/SearchForm/SearchForm';
 
 export default function Movies() {
   const [films, setFilms] = useState([]);
+  // eslint-disable-next-line 
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
   const [searchParams, setSearchParams] = useSearchParams();
+
   const searchQuery = searchParams.get('query') || '';
 
   useEffect(() => {
