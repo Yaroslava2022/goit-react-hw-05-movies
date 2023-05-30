@@ -22,6 +22,7 @@ export default function Movies() {
     }
     console.log('запит змінився');
     fetchOnQuery(searchQuery);
+    // eslint-disable-next-line 
   }, [searchQuery]);
 
   const fetchOnQuery = queryFilms => {
@@ -56,43 +57,6 @@ export default function Movies() {
         
 
 }
-// export default function Movies({ onSubmit }) {
-//     const [query, setQuery] = useState("");
-// 	const onChangeHandler = (e) => {
-//         setQuery(e.target.value);
-//       };
-
-//       const onFormSubmitHandler = (e) => {
-//         e.preventDefault();
-//         if (query.trim() === "") {
-//             Notiflix.Notify.failure('Enter your query');
-//           return;
-//         }
-//        onSubmit(query);
-//        setQuery("");
-//       };
-    
-     
-//         return (
-          
-//             <form className={css.searchForm} onSubmit={onFormSubmitHandler}>
-//               <button type="submit" className={css.searchFormButton}>
-//                 <span className={css.searchFormButtonLabel}>Search</span>
-//               </button>
-    
-//               <input
-//                 className={css.searchFormInput}
-//                 type="text"
-//                 onChange={onChangeHandler}
-//                 autoComplete="off"
-//                 autoFocus
-//                 placeholder="Search movies"
-//                 value={query}
-//               />
-//             </form>
-         
-//         );
-//   };
 
 Movies.propTypes = {
 onSubmit: PropTypes.func,
