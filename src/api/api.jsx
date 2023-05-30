@@ -33,10 +33,34 @@ function fetchTrendMovies(newQuery) {
       return Promise.reject(new Error(`Movie  not found`));
     });
   }
+  function fetchFilmCredits(movieId) {
+    return fetch(
+  `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${key}&language=en-US`)
+  .then(
+      response => {
+        if (response.ok) {
+          return response.json();
+        }
+        return Promise.reject(new Error(`No data  found`));
+      },
+    );
+  }
+  function fetchFilmReviews(movieId) {
+    return fetch(
+      `https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=${key}&language=en-US&page=1`,
+    ).then(response => {
+      if (response.ok) {
+        return response.json();
+      }
+      return Promise.reject(new Error(`No data  found`));
+    });
+  }
   const api = {
+    fetchFilmReviews,
     fetchFilmsOnQuery,
     fetchTrendMovies,
-    fetchMovieDetails
+    fetchMovieDetails,
+    fetchFilmCredits
   };
   
   export default api;
