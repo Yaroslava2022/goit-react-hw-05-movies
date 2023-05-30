@@ -46,7 +46,7 @@ export default function MovieDetails() {
         });
       };
  
-   
+     const score = `${Math.round(movie.vote_average*10)}`
   
       return (
         <div>
@@ -77,7 +77,7 @@ export default function MovieDetails() {
                 }
                 <div className={css.info}>
                   <h2 className={css.title}>{movie.title}</h2>
-                  <p>User Score {movie.vote_average*10}%</p>
+                  <p>User Score {score}%</p>
                   <h3>Overview</h3>
                   <p className={css.overview}>{movie.overview}</p>
                   <h4>Genres</h4>

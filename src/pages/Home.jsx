@@ -14,6 +14,8 @@ export default function Home() {
     }, []);
    
   
-    return <>{films && <ListOnSearch films={films} />}</>;
+    return <>
+    <h1>Tranding today</h1>
+    {films && <ListOnSearch films={films} />}</>;
   }
 

@@ -9,7 +9,7 @@ export default function ListOnSearch({ films }) {
   // console.log(location);
   return (
     <>
-    <h1>Tranding today</h1>
+    
     <ul className={css.list}>
       {films.map(({ id, name, title }) => (
         <Link key={id} to={`/movies/${id}`} state={{ from: location }}>
