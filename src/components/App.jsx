@@ -4,7 +4,7 @@ import React from 'react';
 import { SharedLayout } from './SharedLayout';
 import Home from 'pages/Home';
 import Movies from 'pages/Movies';
-import { MovieDetails } from 'pages/MovieDetails';
+import MovieDetails from 'pages/MovieInformation/MovieDetails';
 // import api from 'api/api';
 // import Notiflix from 'notiflix';
 export const App = () => {

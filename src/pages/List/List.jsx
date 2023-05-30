@@ -8,6 +8,8 @@ export default function ListOnSearch({ films }) {
   const location = useLocation();
   // console.log(location);
   return (
+    <>
+    <h1>Tranding today</h1>
     <ul className={css.list}>
       {films.map(({ id, name, title }) => (
         <Link key={id} to={`/movies/${id}`} state={{ from: location }}>
@@ -19,6 +21,7 @@ export default function ListOnSearch({ films }) {
         </Link>
       ))}
     </ul>
+    </>
   );
 }
 
