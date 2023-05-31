@@ -1,10 +1,10 @@
 import Notiflix from "notiflix";
 import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import css from './SearchForm.module.css';
 
-export default function SearchForm({ onSubmit }) {
+export default function SearchForm() {
   const [query, setQuery] = useState('');
   // eslint-disable-next-line 
   const [searchParams, setSearchParams] = useSearchParams();
@@ -43,6 +43,6 @@ export default function SearchForm({ onSubmit }) {
     </form>
   );
 }
-SearchForm.propTypes = {
-  onSubmit: PropTypes.func,
-};
+// SearchForm.propTypes = {
+//   onSubmit: PropTypes.func,
+// };

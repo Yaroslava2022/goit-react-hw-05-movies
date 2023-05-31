@@ -1,34 +1,23 @@
 import {Route, Routes, Navigate} from 'react-router-dom';
 import React from 'react';
-import { Suspense } from 'react';
-import Loading from './Loader/Loading';
+import { lazy, Suspense } from 'react';
 
-// const SharedLayout = lazy(() =>
-//   import('./SharedLayout.jsx'),
-// );
+const Loading = lazy(() => import('./Loader/Loading'));
+// import Loading from './Loader/Loading';
 
-import { SharedLayout } from './SharedLayout';
-// const Home = lazy(() =>
-//   import('pages/Home.jsx'),
-// );
-import Home from 'pages/Home';
-// const Movies = lazy(() =>
-//   import('pages/Movies.jsx'),
-// );
-import Movies from 'pages/Movies';
-// const MovieDetails = lazy(() =>
-//   import('pages/MovieInformation/MovieDetails.jsx'),
-// );
-import MovieDetails from 'pages/MovieInformation/MovieDetails';
-// const Cast = lazy(() =>
-//   import('./Cast/Cast.jsx'),
-// );
-import Cast from './Cast/Cast';
-// const Reviews = lazy(() =>
-//   import('./Reviews/Reviews.jsx'),
-// );
-import Reviews from './Reviews/Reviews';
+const SharedLayout = lazy(() => import('./SharedLayout'));
 
+// import { SharedLayout } from './SharedLayout';
+const Home = lazy(() => import('pages/Home'));
+// import Home from 'pages/Home';
+const Movies = lazy(() => import('pages/Movies'));
+// import Movies from 'pages/Movies';
+const MovieDetails = lazy(() => import('pages/MovieInformation/MovieDetails'));
+// import MovieDetails from 'pages/MovieInformation/MovieDetails';
+const Cast = lazy(() => import('./Cast/Cast'));
+// import Cast from './Cast/Cast';
+const Reviews = lazy(() => import('./Reviews/Reviews'));
+// import Reviews from './Reviews/Reviews';
 
 
 
