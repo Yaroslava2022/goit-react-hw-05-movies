@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/415.353cd10c.chunk.css","mappings":"AAAA,kBAEI,UAAY,CADZ,WAEF,CAEA,wBACE,UACF,CAEA,kBACE,kBACF","sources":["components/List/List.module.css"],"sourcesContent":[".item {\n    padding: 5px;\n    color: black;\n  }\n  \n  .item:hover {\n    color: blue;\n  }\n  \n  .list {\n    list-style: decimal;\n  }"],"names":[],"sourceRoot":""}
